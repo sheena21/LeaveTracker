@@ -2,7 +2,6 @@ package com.tracker.AttendanceTracker.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -145,11 +144,11 @@ public class User implements UserDetails {
         List<SimpleGrantedAuthority> authorities=new ArrayList<>();
         for(Roles r:roles)
         {
-            authorities.add(new SimpleGrantedAuthority(r.getRole()));
-            System.out.println(r.getRole());
+            authorities.add(new SimpleGrantedAuthority(r.getRoles()));
+            System.out.println(r.getRoles());
         }
 
-        //String[] userRoles=User.getRoles().stream().map((role) -> role.getRole()).toArray(String[]::new);
+        //String[] userRoles=User.getRoles().stream().map((role) -> role.getRoles()).toArray(String[]::new);
        // Collection<GrantedAuthority> authorities= AuthorityUtils.createAuthorityList(userRoles);
         return authorities;
     }

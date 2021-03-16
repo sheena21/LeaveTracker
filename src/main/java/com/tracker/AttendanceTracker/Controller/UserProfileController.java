@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasAnyRole('USER','ADMIN')")
+@PreAuthorize("hasAnyRole('USER','ADMIN','SUPER ADMIN')")
 @RequestMapping("/profile")
 public class UserProfileController {
 

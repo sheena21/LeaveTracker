@@ -4,16 +4,12 @@ package com.tracker.AttendanceTracker.Service;
 import com.tracker.AttendanceTracker.Entity.User;
 import com.tracker.AttendanceTracker.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService  {
     private Set<SimpleGrantedAuthority> getAuthority(User user) {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
         user.getRoles().forEach(role -> {
-            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRole()));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRoles()));
         });
         return authorities;
     }

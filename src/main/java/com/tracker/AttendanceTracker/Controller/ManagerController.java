@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@PreAuthorize("hasAnyRole('MANAGER','ADMIN')")
+@PreAuthorize("hasAnyRole('MANAGER','ADMIN','SUPER ADMIN')")
 @RequestMapping("/manager/profile")
 public class ManagerController {
 

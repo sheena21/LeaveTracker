@@ -14,7 +14,7 @@ import java.security.Principal;
 import java.util.List;
 
 @RestController
-@PreAuthorize("hasAnyRole('USER','MANAGER')")
+@PreAuthorize("hasAnyRole('USER','ADMIN','SUPER ADMIN')")
 @RequestMapping("/profile/leave")
 public class LeaveController {
 

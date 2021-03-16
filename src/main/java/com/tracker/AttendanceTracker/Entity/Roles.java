@@ -1,8 +1,5 @@
 package com.tracker.AttendanceTracker.Entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -19,9 +16,9 @@ public class Roles {
     private Integer id;
 
     @NotNull(message = "Role should not be null...")
-    private String role;
+    private String roles;
 
-   @JsonIgnore
+
     @ManyToMany(mappedBy = "roles",fetch = FetchType.EAGER)
     private List<User> user=new ArrayList<>();
 
@@ -34,12 +31,12 @@ public class Roles {
         this.id = id;
     }
 
-    public String getRole() {
-        return role;
+    public String getRoles() {
+        return roles;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoles(String role) {
+        this.roles = role;
     }
 
     public List<User> getUser() {

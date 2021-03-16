@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@PreAuthorize("hasAnyRole('ADMIN','USER')")
+@PreAuthorize("hasAnyRole('ADMIN','USER','SUPER ADMIN')")
 @RequestMapping("/profile/leaveclaim")
 public class LeaveClaimController {
 

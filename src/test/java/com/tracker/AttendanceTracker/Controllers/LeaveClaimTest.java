@@ -65,7 +65,7 @@ public class LeaveClaimTest {
         userProfile.setEmpid("E01");
         userProfile.setEmptype("Full Time");
         userProfile.setPhoneno("7981136354");
-        userProfile.setRole("Developer");
+        userProfile.setRoles("Developer");
         userProfile.setEmpdep("IT");
         userProfile.setManager(manager);
         leaveApply=new LeaveApply();

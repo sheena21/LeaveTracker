@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@PreAuthorize("hasRole('SUPER ADMIN')")
 @RequestMapping("/roles")
 public class RoleController {
 

@@ -3,7 +3,7 @@ package com.tracker.AttendanceTracker.Security;
 public class SecurityConstants {
 
     public static final String SIGN_UP_URLS = "/api/user/**";
-    public static final String HOME_URLS = "/api/home/**";
+    public static final String HOME_URLS = "/home";
     public static final String MANAGER_URLS="/api/manager/**";
     public static final String ADMIN_URLS="/api/**";
     private static final String USER_URLS="/api/profile/**";
